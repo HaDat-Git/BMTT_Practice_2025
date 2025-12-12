@@ -1,0 +1,81 @@
+1. Ceasar
+Encrypt
+curl --location 'http://127.0.0.1:5000/api/caesar/encrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "plain_text": "HUTECH",
+    "key": "3"
+}'
+Decrypt
+curl --location 'http://127.0.0.1:5000/api/caesar/decrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "cipher_text" : "KXWHFK",
+    "key" : "3"
+}'
+
+2. Vigenere
+Encrypt
+curl --location 'http://127.0.0.1:5000/api/vigenere/encrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "plain_text" : "HUTECH",
+    "key" : "ABC"
+}'
+
+Decrypt
+curl --location 'http://127.0.0.1:5000/api/vigenere/decrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "cipher_text" : "HVVEDJ",
+    "key" : "ABC"
+}'
+
+3. RailFence
+Encrypt
+curl --location 'http://127.0.0.1:5000/api/railfence/decrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "plain_text" : "HUTECH",
+    "key" : "ABC"
+}'
+
+Decrypt
+curl --location 'http://127.0.0.1:5000/api/railfence/decrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "plain_text" : "HUTECH",
+    "key" : "ABC"
+}'
+
+4.Playfair
+Encrypt
+curl --location 'http://127.0.0.1:5000/api/playfair/creatematrix' \
+--header 'Content-Type: application/json' \
+--data '{
+    "key": "MONARCHY"
+}'
+Decrypt
+curl --location 'http://127.0.0.1:5000/api/playfair/encrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "plain_text": "HOMNAYMANHDONG",
+    "key": "MONARCHY"
+}'
+
+5.Transpostion
+Encrypt
+curl --location 'http://127.0.0.1:5000/api/transposition/encrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "plain_text": "HUTECH",
+    "key": "3"
+}'
+Decrypt
+curl --location 'http://127.0.0.1:5000/api/transposition/decrypt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "cipher_text": "HEUCTH",
+    "key": "3"
+}'
+
