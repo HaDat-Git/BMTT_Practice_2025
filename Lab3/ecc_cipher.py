@@ -69,7 +69,6 @@ class MyApp(QMainWindow):
         except requests.exceptions.RequestException as e:
             print("Error: %s" % e.message)
 
-# --- PHẦN KHỞI CHẠY ỨNG DỤNG ---
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
